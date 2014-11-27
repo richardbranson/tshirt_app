@@ -5,9 +5,7 @@
 <% else %>
 <p>Here's your shirt:</p>
 <p>
-	<%= @shirt.name %>
-	<br>
-	<%= image_tag @shirt.image %>
+<%= render partial: 'shirt', locals: { a_shirt: @shirt } %>
 </p>
 
 <% end %>

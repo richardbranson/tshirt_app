@@ -5,8 +5,7 @@ class ShirtsController < ApplicationController
 
   def search
   	@search = params[:q]
-  	# @shirt = Tshirt.all.find { |shirt| shirt.name.downcase.include? @search }
-  	@shirt = Tshirt.where( "name LIKE ?", "%#{@search}%" ).first
+  	@shirt = Tshirt.search(@search)
   	@no_results = !@shirt
   end
 end
