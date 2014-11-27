@@ -1,2 +1,12 @@
-<h1>Here are my t-shirts!</h1>
-<p>Wow</p>
+<h1>
+	Here are my t-shirts!
+</h1>
+
+
+<% @shirts.each do |shirt| %>
+<h2>Name: <%= shirt.name %></h2>
+<p>Description: Name: <%= shirt.description %><p>
+<p><%= image_tag shirt.image, size: '124' %></p>
+<hr>
+<% end %>
+
