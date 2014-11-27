@@ -6,6 +6,7 @@ Rails.application.routes.draw do
  get 'shirts/', to:'shirts#index'
   # You can have the root of your site routed with "root"
   root 'shirts#index'
+  get '/search' => 'shirts#search'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

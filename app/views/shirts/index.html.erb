@@ -2,11 +2,15 @@
 	Here are my t-shirts!
 </h1>
 
+<form action= "/search" action="post">
+	<input name="q" type="text"/>
+	<button>Search</button>
+</form>
+
 
 <% @shirts.each do |shirt| %>
 <h2>Name: <%= shirt.name %></h2>
-<p>Description: Name: <%= shirt.description %><p>
+<p>Description: <%= shirt.description %><p>
 <p><%= image_tag shirt.image, size: '124' %></p>
 <hr>
 <% end %>
-
